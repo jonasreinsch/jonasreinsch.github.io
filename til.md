@@ -2,6 +2,15 @@
 
 2020-07-07
 
+#### Generate an image with Imagemagick
+
+```
+convert -size 1000x1000 canvas:tomato canvas_tomato.png
+```
+
+
+
+
 #### Follow redirects with curl
 
 ```
