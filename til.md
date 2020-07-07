@@ -2,7 +2,7 @@
 
 2020-07-08
 
-#### Focus tip
+#### Focus tip: Brain.fm and SelfControl apps
 
 As preparation, before high concentration is required:
 
