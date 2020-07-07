@@ -8,8 +8,11 @@
 convert -size 1000x1000 canvas:tomato canvas_tomato.png
 ```
 
+[Reference](http://www.imagemagick.org/Usage/canvas/#solid)
 
+#imagemagick
 
+---
 
 #### Follow redirects with curl
 
