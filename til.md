@@ -2,6 +2,17 @@
 
 2020-07-07
 
+
+### Set the standard board in the Trello Mac app
+
+```Shift-Cmd-d```
+
+The standard board is loaded when the Mac app is started, you can
+also switch to it via `Cmd-d`.
+
+
+---
+
 #### Good favicon generator / checker
 
 [RealFaviconGenerator](https://realfavicongenerator.net/)
