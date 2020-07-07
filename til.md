@@ -2,8 +2,19 @@
 
 2020-07-07
 
+#### Follow redirects with curl
 
-### Set the standard board in the Trello Mac app
+```
+curl -L
+```
+
+or `curl --location`. Mnemonic: the `Location: `-header together with a `3xx` response code is set if a redirect is active.
+
+#curl
+
+---
+
+#### Set the standard board in the Trello Mac app
 
 ```
 Shift-Cmd-d
@@ -12,6 +23,7 @@ Shift-Cmd-d
 The standard board is loaded when the Mac app is started, you can
 also quickly switch to it via `Cmd-d`.
 
+#trello
 
 ---
 
