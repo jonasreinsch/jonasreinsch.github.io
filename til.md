@@ -1,5 +1,23 @@
 ## TIL
 
+2020-07-08
+
+#### Focus tip
+
+As preparation, before high concentration is required:
+
+1. Put on headphones
+2. Start the [Brain.fm](https://www.brain.fm/) app, select one of the 'Focus' tracks.
+3. Will you be able to work without internet for 15-30min? And are you on a Mac?
+   Then use the [SelfControl](https://selfcontrolapp.com/) app in whitelist mode.
+
+If you think 2 and 3 contradict each other (not able to use Brain.fm if no internet): I
+use the Brain.fm iOS app and use SelfControl on the Mac.
+
+#focus
+
+---
+
 2020-07-07
 
 #### Generate an image with Imagemagick
