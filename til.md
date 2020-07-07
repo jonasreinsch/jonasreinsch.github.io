@@ -2,16 +2,29 @@
 
 2020-07-07
 
-#### How to make the font larger or smaller in Emacs
+#### Good favicon generator / checker
 
-- To increase font size for the current buffer in Emacs, use `C-x C-+`
-- To decrease font size for the current buffer in Emacs, use `C-x C--`
-- To reset font size to the default, use `C-x C-0`
+[RealFaviconGenerator](https://realfavicongenerator.net/)
 
-In practice, I hit `C-x`, hold the control key pressed, then just press `+` and `-`
-repeatedly (much like `Cmd-+` / `Cmd--` for Mac apps works).
+#bookmarks
 
-#emacs
+---
+
+
+#### Print the default Html template for Pandoc
+
+````
+pandoc --print-default-template html
+````
+
+Redirect it to a file, then adapt the template (e.g. to add a favicon).
+Then later include the template with
+
+```
+pandoc --template=FILE
+```
+
+#pandoc
 
 ---
 
@@ -28,3 +41,17 @@ If yes and the corresponding file is not executable yet it will
 make it executable.
 
 #emacs
+
+---
+
+#### How to make the font larger or smaller in Emacs
+
+- To increase font size for the current buffer in Emacs, use `C-x C-+`
+- To decrease font size for the current buffer in Emacs, use `C-x C--`
+- To reset font size to the default, use `C-x C-0`
+
+In practice, I hit `C-x`, hold the control key pressed, then just press `+` and `-`
+repeatedly (much like `Cmd-+` / `Cmd--` for Mac apps works).
+
+#emacs
+

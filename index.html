@@ -1,5 +1,21 @@
 <h2 id="til">TIL</h2>
 <p>2020-07-07</p>
+<h4 id="good-favicon-generator-checker">Good favicon generator / checker</h4>
+<p><a href="https://realfavicongenerator.net/">RealFaviconGenerator</a></p>
+<p>#bookmarks</p>
+<hr />
+<h4 id="print-the-default-html-template-for-pandoc">Print the default Html template for Pandoc</h4>
+<pre><code>pandoc --print-default-template html</code></pre>
+<p>Redirect it to a file, then adapt the template (e.g. to add a favicon). Then later include the template with</p>
+<pre><code>pandoc --template=FILE</code></pre>
+<p>#pandoc</p>
+<hr />
+<h4 id="tell-emacs-to-make-script-files-executable-upon-saving">Tell Emacs to make script files executable upon saving</h4>
+<pre><code>(add-hook &#39;after-save-hook
+    &#39;executable-make-buffer-file-executable-if-script-p)</code></pre>
+<p>This will add a hook that checks if a the text contained in a buffer looks like a script (it does this by testing if the text starts with a shebang). If yes and the corresponding file is not executable yet it will make it executable.</p>
+<p>#emacs</p>
+<hr />
 <h4 id="how-to-make-the-font-larger-or-smaller-in-emacs">How to make the font larger or smaller in Emacs</h4>
 <ul>
 <li>To increase font size for the current buffer in Emacs, use <code>C-x C-+</code></li>
@@ -7,10 +23,4 @@
 <li>To reset font size to the default, use <code>C-x C-0</code></li>
 </ul>
 <p>In practice, I hit <code>C-x</code>, hold the control key pressed, then just press <code>+</code> and <code>-</code> repeatedly (much like <code>Cmd-+</code> / <code>Cmd--</code> for Mac apps works).</p>
-<p>#emacs</p>
-<hr />
-<h4 id="tell-emacs-to-make-script-files-executable-upon-saving">Tell Emacs to make script files executable upon saving</h4>
-<pre><code>(add-hook &#39;after-save-hook
-    &#39;executable-make-buffer-file-executable-if-script-p)</code></pre>
-<p>This will add a hook that checks if a the text contained in a buffer looks like a script (it does this by testing if the text starts with a shebang). If yes and the corresponding file is not executable yet it will make it executable.</p>
 <p>#emacs</p>
