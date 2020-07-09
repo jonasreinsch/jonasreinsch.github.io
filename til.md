@@ -2,7 +2,7 @@
 
 ---
 
-2020-07-08
+2020-07-09
 
 ### Validate an email address with Python
 
