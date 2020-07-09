@@ -24,9 +24,45 @@
 </head>
 <body>
 <h2 id="til">TIL</h2>
+<p>2020-07-10</p>
+<h4 id="given-an-email-address-get-the-uid-of-the-corresponding-firebase-user">Given an email address, get the UID of the corresponding Firebase user</h4>
+<pre><code>#!/usr/bin/env python
+import sys
+import firebase_admin
+from firebase_admin import auth
+from email_validator import validate_email, EmailNotValidError
+import google.auth.exceptions
+
+cred = firebase_admin.credentials.Certificate(
+    &#39;SERVICE_ACCOUNT.json&#39;
+)
+firebase_admin.initialize_app(cred)
+
+if len(sys.argv) != 2:
+    print(&quot;Usage: &quot; + sys.argv[0] + &quot; EMAIL&quot;)
+    sys.exit(1)
+
+email = sys.argv[1]
+
+# make a syntax-only check if the mail address is valid
+try:
+    validate_email(email, check_deliverability=False)
+except EmailNotValidError as e:
+    print(email + &quot; is not a valid email address&quot;)
+    print(str(e))
+    sys.exit(1)
+
+try:
+    user = auth.get_user_by_email(email)
+    print(user.uid)
+except google.auth.exceptions.TransportError:
+    print(&quot;TransportError - do you have a working internet connection?&quot;)
+except firebase_admin._auth_utils.UserNotFoundError:
+    print(&quot;UserNotFoundError - no Firebase user with email &quot; + email + &quot; found in this instance&quot;)</code></pre>
+<p>#python #firebase</p>
 <hr />
 <p>2020-07-09</p>
-<h3 id="validate-an-email-address-with-python">Validate an email address with Python</h3>
+<h4 id="validate-an-email-address-with-python">Validate an email address with Python</h4>
 <p>The <code>email_validator</code> module by Joshua Tauberer is simple to use and provides good error messages.</p>
 <p>Install with</p>
 <pre><code>pip install email_validator</code></pre>

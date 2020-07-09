@@ -1,10 +1,52 @@
 ## TIL
 
+2020-07-10
+
+#### Given an email address, get the UID of the corresponding Firebase user
+
+```
+#!/usr/bin/env python
+import sys
+import firebase_admin
+from firebase_admin import auth
+from email_validator import validate_email, EmailNotValidError
+import google.auth.exceptions
+
+cred = firebase_admin.credentials.Certificate(
+    'SERVICE_ACCOUNT.json'
+)
+firebase_admin.initialize_app(cred)
+
+if len(sys.argv) != 2:
+    print("Usage: " + sys.argv[0] + " EMAIL")
+    sys.exit(1)
+
+email = sys.argv[1]
+
+# make a syntax-only check if the mail address is valid
+try:
+    validate_email(email, check_deliverability=False)
+except EmailNotValidError as e:
+    print(email + " is not a valid email address")
+    print(str(e))
+    sys.exit(1)
+
+try:
+    user = auth.get_user_by_email(email)
+    print(user.uid)
+except google.auth.exceptions.TransportError:
+    print("TransportError - do you have a working internet connection?")
+except firebase_admin._auth_utils.UserNotFoundError:
+    print("UserNotFoundError - no Firebase user with email " + email + " found in this instance")
+```
+
+#python #firebase
+
 ---
 
 2020-07-09
 
-### Validate an email address with Python
+#### Validate an email address with Python
 
 The `email_validator` module by Joshua Tauberer is simple to use
 and provides good error messages.
