@@ -1,5 +1,34 @@
 ## TIL
 
+---
+
+2020-07-08
+
+### Validate an email address with Python
+
+The `email_validator` module by Joshua Tauberer is simple to use
+and provides good error messages.
+
+Install with
+
+```
+pip install email_validator
+```
+
+Then use like this for email syntax check:
+
+
+```
+from email_validator import validate_email, EmailNotValidError
+
+try:
+    validate_email('EMAIL_TO_VALIDATE', check_deliverability=False)
+except EmailNotValidError as e:
+    print(str(e)) # nice error message
+```
+
+---
+
 2020-07-08
 
 #### Focus tip: Brain.fm and SelfControl apps

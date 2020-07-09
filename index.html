@@ -24,6 +24,20 @@
 </head>
 <body>
 <h2 id="til">TIL</h2>
+<hr />
+<p>2020-07-08</p>
+<h3 id="validate-an-email-address-with-python">Validate an email address with Python</h3>
+<p>The <code>email_validator</code> module by Joshua Tauberer is simple to use and provides good error messages.</p>
+<p>Install with</p>
+<pre><code>pip install email_validator</code></pre>
+<p>Then use like this for email syntax check:</p>
+<pre><code>from email_validator import validate_email, EmailNotValidError
+
+try:
+    validate_email(&#39;EMAIL_TO_VALIDATE&#39;, check_deliverability=False)
+except EmailNotValidError as e:
+    print(str(e)) # nice error message</code></pre>
+<hr />
 <p>2020-07-08</p>
 <h4 id="focus-tip-brain.fm-and-selfcontrol-apps">Focus tip: Brain.fm and SelfControl apps</h4>
 <p>As preparation, before high concentration is required:</p>
