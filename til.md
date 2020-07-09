@@ -27,6 +27,8 @@ except EmailNotValidError as e:
     print(str(e)) # nice error message
 ```
 
+#python
+
 ---
 
 2020-07-08
