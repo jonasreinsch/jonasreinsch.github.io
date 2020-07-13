@@ -1,5 +1,60 @@
 ## TIL
 
+2020-07-12
+
+#### Length of strings and list-like data structures in different programming languages
+
+Python:
+
+```
+a = [1, 2, 3, 4]
+t = 1, 2, 3, 4
+s = "blub"
+print(len(a))
+print(len(s))
+print(len(t)) # length of a tuple
+```
+
+Perl:
+```
+my @a = (1, 2, 3, 4);
+my $s = "blub";
+say scalar @a;
+say length $s;
+# list assignment, in scalar context, returns number of scalars on RHS
+my $length = () = (1, 2, 3); 
+say $length;
+# In one line
+say scalar(() = (1, 2, 3));
+
+```
+See [here](https://stackoverflow.com/a/57336399), [here](https://stackoverflow.com/a/54564429), and [here](https://metacpan.org/pod/distribution/perlsecret/lib/perlsecret.pod#Goatse).
+
+
+Elisp:
+```
+(length '(1 2 3))
+(length "blub")
+```
+
+Javascript:
+
+```
+"blub".length;
+[1, 2, 3, 4].length;
+```
+
+Swift:
+```
+"blub".count
+[1, 2, 3, 4].count
+
+```
+
+#python #perl #elisp #javascript #swift
+
+---
+
 2020-07-10
 
 #### Given an email address, get the UID of the corresponding Firebase user

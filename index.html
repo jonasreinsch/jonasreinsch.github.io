@@ -24,6 +24,39 @@
 </head>
 <body>
 <h2 id="til">TIL</h2>
+<p>2020-07-12</p>
+<h4 id="length-of-strings-and-list-like-data-structures-in-different-programming-languages">Length of strings and list-like data structures in different programming languages</h4>
+<p>Python:</p>
+<pre><code>a = [1, 2, 3, 4]
+t = 1, 2, 3, 4
+s = &quot;blub&quot;
+print(len(a))
+print(len(s))
+print(len(t)) # length of a tuple</code></pre>
+<p>Perl:</p>
+<pre><code>my @a = (1, 2, 3, 4);
+my $s = &quot;blub&quot;;
+say scalar @a;
+say length $s;
+# list assignment, in scalar context, returns number of scalars on RHS
+my $length = () = (1, 2, 3); 
+say $length;
+# In one line
+say scalar(() = (1, 2, 3));
+</code></pre>
+<p>See <a href="https://stackoverflow.com/a/57336399">here</a>, <a href="https://stackoverflow.com/a/54564429">here</a>, and <a href="https://metacpan.org/pod/distribution/perlsecret/lib/perlsecret.pod#Goatse">here</a>.</p>
+<p>Elisp:</p>
+<pre><code>(length &#39;(1 2 3))
+(length &quot;blub&quot;)</code></pre>
+<p>Javascript:</p>
+<pre><code>&quot;blub&quot;.length;
+[1, 2, 3, 4].length;</code></pre>
+<p>Swift:</p>
+<pre><code>&quot;blub&quot;.count
+[1, 2, 3, 4].count
+</code></pre>
+<p>#python #perl #elisp #javascript #swift</p>
+<hr />
 <p>2020-07-10</p>
 <h4 id="given-an-email-address-get-the-uid-of-the-corresponding-firebase-user">Given an email address, get the UID of the corresponding Firebase user</h4>
 <pre><code>#!/usr/bin/env python
