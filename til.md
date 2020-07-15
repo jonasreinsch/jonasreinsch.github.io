@@ -1,5 +1,14 @@
 ## TIL
 
+2020-07-15
+
+#### OBS Setup for Live Code Streaming
+
+- [How to Run a Live Coding Stream on Twitch using OBS](https://jordanlewis.org/posts/twitch-live-coding/)
+- [Some Discussion](https://news.ycombinator.com/item?id=23835624)
+
+#obs #screensharing
+
 2020-07-12
 
 #### Length of strings and list-like data structures in different programming languages
