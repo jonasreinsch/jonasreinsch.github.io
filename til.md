@@ -7,7 +7,7 @@
 - [How to Run a Live Coding Stream on Twitch using OBS](https://jordanlewis.org/posts/twitch-live-coding/)
 - [Some Discussion](https://news.ycombinator.com/item?id=23835624)
 
-#obs #screensharing
+#obs #screensharing #bookmarks
 
 2020-07-12
 
