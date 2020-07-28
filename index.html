@@ -24,6 +24,14 @@
 </head>
 <body>
 <h2 id="til">TIL</h2>
+<p>2020-07-28</p>
+<h4 id="insert-current-date-in-emacs-buffer">Insert current date in Emacs buffer</h4>
+<pre><code>(defun insert-date ()
+  &quot;Insert the current date in ISO 8601 format (like \&quot;%Y-%m-%d\&quot;)&quot;
+  (interactive)
+  (insert (format-time-string &quot;%F\n&quot; (current-time))))</code></pre>
+<p>See <code>C-h f format-time-string</code> for other formatting options.</p>
+<hr />
 <p>2020-07-15</p>
 <h4 id="obs-setup-for-live-code-streaming">OBS Setup for Live Code Streaming</h4>
 <ul>

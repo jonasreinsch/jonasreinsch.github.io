@@ -1,5 +1,20 @@
 ## TIL
 
+2020-07-28
+
+#### Insert current date in Emacs buffer
+
+```
+(defun insert-date ()
+  "Insert the current date in ISO 8601 format (like \"%Y-%m-%d\")"
+  (interactive)
+  (insert (format-time-string "%F\n" (current-time))))
+```
+
+See `C-h f format-time-string` for other formatting options.
+
+---
+
 2020-07-15
 
 #### OBS Setup for Live Code Streaming
