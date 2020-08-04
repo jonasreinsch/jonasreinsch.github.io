@@ -1,5 +1,25 @@
 ## TIL
 
+2020-08-04
+
+#### Make a floating label in Ionic
+
+Set the value of the `position` attribute of `ion-label` to `floating`:
+
+```
+<ion-label>
+  <ion-label position="floating">...</ion-label>
+  <ion-input></ion-input>
+</ion-label>
+
+```
+
+other possible values vor `position` are `stacked` (this will place the label above the input element), `fixed`, and undefined (inline).
+
+#ionic
+
+---
+
 2020-07-28
 
 #### Insert current date in Emacs buffer
@@ -12,6 +32,8 @@
 ```
 
 See `C-h f format-time-string` for other formatting options.
+
+#emacs
 
 ---
 
